@@ -3,7 +3,6 @@
 > **Tagline:** *Har Safar Ka Ek Hi Mate* 🚀
 
 [![Build Status](https://img.shields.io/badge/Status-In%20Development-orange)]()
-[![Team](https://img.shields.io/badge/Team-TechNova-blue)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
 ---
