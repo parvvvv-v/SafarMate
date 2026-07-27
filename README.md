@@ -1,46 +1,40 @@
-# 🌍 SafarMate: Unified AI & Blockchain Travel Management System
+# 🗺️ SafarMate — "Har Safar Ka Ek Hi Mate"
 
-> **Tagline:** *Har Safar Ka Ek Hi Mate* 🚀
-
-[![Build Status](https://img.shields.io/badge/Status-In%20Development-orange)]()
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+> **SafarMate** is an interactive, solo-developed Web-based Smart Travel Planning Application tailored specifically for Indian itineraries[cite: 2, 4]. It replaces rigid pre-packaged tours and generic top-10 lists with dynamic, personalized daily schedules, travel logistics, stay choices, and local eating spots[cite: 2, 3, 4].
 
 ---
 
-## 📌 About SafarMate
+## 🛠️ Tech Stack & Architecture
 
-**SafarMate** is an all-in-one AI and Blockchain-powered super-app designed to solve the chaotic, multi-app experience of modern travel. By centralizing travel logistics, real-time trip adjustments, group expense splitting, lossless photo sharing, and contextual safety into a single, battery-efficient ecosystem, SafarMate ensures a smooth and stress-free journey from departure to return.
-
----
-
-## 🚨 Problem Statement
-
-* **App Overload:** Juggling multiple applications drains phone batteries and causes digital chaos.
-* **Data Scrawl:** Tickets, addresses, and details get lost in endless chat threads.
-* **Split Stress:** Manual expense calculations cause social awkwardness and payment disputes.
-* **Rigid Plans:** Weather changes and flight delays break static itineraries without automatic correction.
-* **Safety Gaps:** Lack of a one-tap emergency system to immediately alert groups or authorities.
-* **Photo Silos:** High-quality travel memories get compressed or trapped on individual phones.
+* **Frontend:** HTML5, CSS3 (Custom CSS variables, Glassmorphism design system, flexbox/grid responsive layouts)[cite: 2, 3, 4]
+* **Fonts & Icons:** Google Fonts (*Fraunces*, *Caveat*, *Work Sans*) and FontAwesome 6[cite: 2, 3, 4]
+* **JavaScript:** Vanilla JavaScript ES6+ (DOM manipulation, dynamic suggestions engine, local storage management)[cite: 2, 3, 5]
+* **Architecture:** Multi-page client-side web application leveraging `localStorage` for cross-page data persistence between forms and itinerary views[cite: 2, 3, 5]
 
 ---
 
-## 🔥 Key Solution Features
+## 🌟 Key Modules & Pages
 
-### 🧠 1. Self-Healing AI Engine
-* **Predictive Itinerary Generation:** Generates complete end-to-end trip itineraries based on user inputs (destination, dates, budget, group details).
-* **Real-Time Auto-Correction:** Continuously monitors weather updates and transit delays to re-route and reshuffle schedules automatically without manual user input.
+### 1. Landing Page (`SafarMate.html` / `index.html`)
+* **Hero Section:** Automated background image slideshow featuring iconic Indian travel destinations[cite: 2, 4].
+* **Interactive Elements:** Smooth scroll-cue animations, active progress trail bar, animated counters, mobile navigation drawer, and traveler reviews[cite: 4].
+* **Call To Action:** Direct launch into the interactive trip builder without forcing sign-up forms[cite: 2, 4].
 
-### ⛓️ 2. Blockchain Financial Layer
-* **Automated Group Expense Splitting:** Smart contracts handle transparent, dispute-free expense calculations and settlements on networks like Polygon or Solana.
-* **Native Payments:** Integrated payment gateway supporting seamless transactions (UPI / GPay / PhonePe style).
+### 2. Custom Trip Planner Form
+* **Smart Destination Search:** Real-time autocomplete search field pre-loaded with major Indian destinations[cite: 2, 5].
+* **Pill-Tag Selection:** Interactive tag system allowing users to pick up to **3 unique destinations** per trip[cite: 2, 5].
+* **Trip Parameters:** Configurable trip duration (1–30 days) and budget tiers (**Budget / Balanced / Luxury**)[cite: 2].
 
-### 🛡️ 3. Contextual SOS & Real-Time Sync
-* **One-Tap Emergency Alert:** Instantly broadcasts live GPS tracking and full trip context to your travel group and local authorities in emergency situations.
-* **Group Sync:** Real-time location tracking and instant group status updates.
-
-### 📸 4. Decentralized Media Vault
-* **Lossless Photo Sharing:** Distributed media storage powered by **IPFS / Filecoin** ensures original, high-resolution photo and video sharing without resolution loss.
+### 3. Dynamic Itinerary Generator (`itinerary.html`)
+* **Travel Logistics:** Automatic city-specific arrival guidance and local transport options (flights, metro, scooters, cabs)[cite: 3].
+* **Spot-by-Spot Schedule:** Daily timeline broken into morning, afternoon, and evening activities with insider "Human Tips"[cite: 3].
+* **Tailored Stays & Local Eats:** Handpicked accommodation and restaurant recommendations categorized directly by the chosen budget tier[cite: 3].
 
 ---
 
-## 🏗 System Architecture
+## 📋 Features at a Glance
+
+| Feature | Description |
+| :--- | :--- |
+| **Solo Built Project** | Designed, styled, and coded end-to-end as an independent creation[cite: 2, 4]. |
+| **No-Database Setup** | Leverages browser `localStorage` for seamless data transfer across pages[cite: 2, 3, 5]. |
