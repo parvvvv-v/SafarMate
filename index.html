@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafarMate — Plan Your Custom Journey</title>
+    <meta name="description" content="Plan your custom Indian travel itinerary with SafarMate. Select destination spots, days, and budget.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="bg-slideshow">
+        <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1506461883276-594a12b11ce3?auto=format&fit=crop&w=2000&q=80')"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=2000&q=80')"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=2000&q=80')"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=2000&q=80')"></div>
+        <div class="bg-gradient"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5L90 28.1V74.4L50 97.5L10 74.4V28.1L50 5Z" fill="#1B4332"/>
+                    <path d="M50 12L82 30.5V69.5L50 88L18 30.5V30.5L50 12Z" fill="#5DA57D"/>
+                    <circle cx="50" cy="35" r="12" fill="#FBF7ED"/>
+                    <path d="M30 70C40 60 60 60 70 70" stroke="#FBF7ED" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-word">SafarMate</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="SafarMate.html">Home</a>
+                <a href="SafarMate.html#destinations">Destinations</a>
+                <a href="SafarMate.html#features">Why Us</a>
+                <a href="SafarMate.html#stories">Stories</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero-container">
+        <div class="hero-text">
+            <div class="hero-badge"><i class="fa-solid fa-compass"></i> Smart Travel Engine</div>
+            <h1 class="hero-title">Craft Your Custom <span>Indian Odyssey</span></h1>
+            <p class="hero-desc">Choose up to 3 destinations, set your pace, and let our engine map out realistic daily routes, travel logistics, handpicked stays, and culinary stops.</p>
+        </div>
+
+        <div class="glass-card">
+            <form id="planner-form">
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fa-solid fa-map-pin"></i> Select Destinations (Up to 3)</label>
+                    <div class="search-box">
+                        <input type="text" id="city-input" class="input-control" placeholder="Type a city or destination worldwide..." autocomplete="off">
+                        <div id="suggestions-box" class="suggestions-dropdown"></div>
+                    </div>
+                    <div id="selected-tags" class="tags-wrapper"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fa-solid fa-calendar-days"></i> Trip Duration (Days)</label>
+                    <input type="number" id="trip-days" class="input-control" min="1" max="30" placeholder="e.g., 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label"><i class="fa-solid fa-wallet"></i> Travel Budget Tier</label>
+                    <div class="budget-selector">
+                        <label class="budget-option">
+                            <input type="radio" name="budget" value="Low">
+                            <div class="budget-card">
+                                <i class="fa-solid fa-leaf"></i>
+                                <span>Budget</span>
+                            </div>
+                        </label>
+
+                        <label class="budget-option">
+                            <input type="radio" name="budget" value="Average" checked>
+                            <div class="budget-card">
+                                <i class="fa-solid fa-compass"></i>
+                                <span>Balanced</span>
+                            </div>
+                        </label>
+
+                        <label class="budget-option">
+                            <input type="radio" name="budget" value="Luxury">
+                            <div class="budget-card">
+                                <i class="fa-solid fa-gem"></i>
+                                <span>Luxury</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Generate Itinerary <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 SafarMate. Built for seamless travel planning.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

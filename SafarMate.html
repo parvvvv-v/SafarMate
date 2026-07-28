@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafarMate — Har Safar Ka Ek Hi Mate</title>
+<meta name="description" content="SafarMate plans your mountains, beaches and everything-in-between trips with AI — then hands you an itinerary that actually feels like yours.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Caveat:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="safarmate.css">
+</head>
+<body>
+
+<div class="trail-progress" aria-hidden="true"><span id="trailFill"></span></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:42px;height:42px;">
+        <path d="M50 5L90 28.1V74.4L50 97.5L10 74.4V28.1L50 5Z" fill="#1B4332"/>
+        <path d="M50 12L82 30.5V69.5L50 88L18 30.5V30.5L50 12Z" fill="#5DA57D"/>
+        <circle cx="50" cy="35" r="12" fill="#FBF7ED"/>
+        <path d="M30 70C40 60 60 60 70 70" stroke="#FBF7ED" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-word">SafarMate</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#how-it-works">How it works</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#features">Why us</a>
+      <a href="#stories">Stories</a>
+      <a href="index.html" class="nav-cta">Plan my Safar</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="hero-media" id="heroMedia">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80" alt="Mountain range at golden hour" class="hero-img hero-img--a">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80" alt="Turquoise beach coastline from above" class="hero-img hero-img--b">
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="wrap hero-content">
+      <p class="script-tag reveal">Har Safar Ka Ek Hi Mate</p>
+      <h1 class="hero-title reveal">
+        Tell it where your <em>dil</em> wants to go.<br>
+        SafarMate charts the <em>rasta</em>.
+      </h1>
+      <p class="hero-sub reveal">
+        From misty Himalayan switchbacks to Goan sunsets — describe the trip in your own words,
+        and get a day-by-day itinerary built around how you actually like to travel.
+      </p>
+
+      <div class="reveal">
+        <a href="index.html" class="btn-cta">
+          <span>Start Planning</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="hero-chips reveal" aria-hidden="true">
+        <span>🏔️ Manali</span><span>🏖️ Goa</span><span>🛶 Kerala</span><span>🏜️ Jaisalmer</span><span>🌊 Andaman</span>
+      </div>
+    </div>
+
+    <a href="#stats" class="scroll-cue" aria-label="Scroll down">
+      <span class="scroll-cue-line"></span> keep going
+    </a>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="wrap stats-grid">
+      <div class="stat reveal">
+        <span class="stat-num" data-count="42000">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Safars planned</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-count="380">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Destinations mapped</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-count="4.8">0</span>
+        <span class="stat-label">Average traveler rating</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num" data-count="19">0</span>
+        <span class="stat-label">Minutes to a full itinerary</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how-it-works">
+    <div class="wrap">
+      <p class="eyebrow reveal">The route</p>
+      <h2 class="section-title reveal">Three turns to your next trip</h2>
+      <p class="section-sub reveal">No forms that feel like tax filing. Just a conversation that turns into a plan.</p>
+    </div>
+
+    <div class="trail-wrap wrap">
+      <svg class="trail-svg" id="trailSvg" viewBox="0 0 200 720" preserveAspectRatio="none" aria-hidden="true">
+        <path id="trailPath" d="M100,10 C40,90 160,140 100,220 C40,300 160,350 100,430 C40,510 160,560 100,650" />
+      </svg>
+
+      <div class="step reveal" data-step="1">
+        <div class="step-marker">1</div>
+        <div class="step-card">
+          <h3>Say where and how</h3>
+          <p>Type it like you'd tell a friend — "6 days, Ladakh, love long drives and bad coffee is fine." SafarMate reads the vibe, not just the keywords.</p>
+        </div>
+      </div>
+
+      <div class="step step--right reveal" data-step="2">
+        <div class="step-marker">2</div>
+        <div class="step-card">
+          <h3>Get a real itinerary</h3>
+          <p>A day-by-day plan with drive times, altitude warnings, sunset spots, and food stops that locals actually go to — not just the top 10 list.</p>
+        </div>
+      </div>
+
+      <div class="step reveal" data-step="3">
+        <div class="step-marker">3</div>
+        <div class="step-card">
+          <h3>Tweak, save, go</h3>
+          <p>Swap a hill station for a lake, stretch a day, drop a museum. Save it offline and share it with whoever's coming along.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="destinations" id="destinations">
+    <div class="wrap">
+      <p class="eyebrow reveal">Where next</p>
+      <h2 class="section-title reveal">Mountains on Monday, tides by Friday</h2>
+      <p class="section-sub reveal">A handful of Safars our travelers keep going back for.</p>
+    </div>
+
+    <div class="dest-grid wrap">
+      <article class="dest-card dest-card--tall reveal">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1000&q=80" alt="Snow-capped peaks and valley in Ladakh">
+        <div class="dest-info">
+          <span class="dest-kicker">Mountains</span>
+          <h3>Ladakh</h3>
+          <p>High passes, blue lakes, silence you can hear.</p>
+        </div>
+      </article>
+
+      <article class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Palm-lined beach in Goa">
+        <div class="dest-info">
+          <span class="dest-kicker">Beaches</span>
+          <h3>Goa</h3>
+          <p>Shacks, sunsets, and the drive between them.</p>
+        </div>
+      </article>
+
+      <article class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80" alt="Backwaters and houseboat in Kerala">
+        <div class="dest-info">
+          <span class="dest-kicker">Backwaters</span>
+          <h3>Kerala</h3>
+          <p>Slow water, slower mornings.</p>
+        </div>
+      </article>
+
+      <article class="dest-card reveal">
+        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80" alt="Pine forest mountain road">
+        <div class="dest-info">
+          <span class="dest-kicker">Hill towns</span>
+          <h3>Manali</h3>
+          <p>Pine roads that don't hurry anywhere.</p>
+        </div>
+      </article>
+
+      <article class="dest-card dest-card--tall reveal">
+        <img src="https://images.unsplash.com/photo-1524230659092-07f99a75c013?auto=format&fit=crop&w=1000&q=80" alt="Sand dunes at sunset in Jaisalmer">
+        <div class="dest-info">
+          <span class="dest-kicker">Desert</span>
+          <h3>Jaisalmer</h3>
+          <p>Golden dunes, star-heavy nights.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="quote-break">
+    <div class="wrap">
+      <p class="big-quote reveal">"Every Safar leaves footprints on the heart before it leaves them on the road."</p>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap">
+      <p class="eyebrow reveal">Why SafarMate</p>
+      <h2 class="section-title reveal">Built for how you actually travel</h2>
+    </div>
+
+    <div class="feature-grid wrap">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🧭</span>
+        <h3>Itineraries with taste</h3>
+        <p>Not a generic top-10 list — plans shaped by your pace, budget, and the kind of traveler you already are.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">💸</span>
+        <h3>Budget that bends</h3>
+        <p>Set a number and SafarMate fits stays, food, and travel inside it — no surprise splurges on day 3.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🌦️</span>
+        <h3>Weather-aware routing</h3>
+        <p>Passes that close, monsoons that flood, heat that ruins afternoons — accounted for before you pack.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📍</span>
+        <h3>Local, not just listed</h3>
+        <p>The dhaba with no signboard. The viewpoint without a ticket counter. Places locals mention, not rank.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📶</span>
+        <h3>Works with no signal</h3>
+        <p>Save your Safar offline for the exact stretches — mountain passes, remote coastlines — where you'll need it most.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🧑‍🤝‍🧑</span>
+        <h3>Built for the whole group</h3>
+        <p>One plan, shared and editable, so nobody's stuck re-explaining the itinerary in three different chats.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stories" id="stories">
+    <div class="wrap">
+      <p class="eyebrow reveal">Traveler stories</p>
+      <h2 class="section-title reveal">Safars, in their own words</h2>
+    </div>
+
+    <div class="stories-track wrap" id="storiesTrack">
+      <article class="story-card reveal">
+        <p class="story-quote">"Told it I wanted mountains but hated crowds. It sent me to a village I still think about."</p>
+        <div class="story-who">
+          <span class="story-avatar">A</span>
+          <div><strong>Aditi R.</strong><span>Spiti Valley, 7 days</span></div>
+        </div>
+      </article>
+      <article class="story-card reveal">
+        <p class="story-quote">"First planner that understood 'budget' actually meant budget. Every stay fit."</p>
+        <div class="story-who">
+          <span class="story-avatar">K</span>
+          <div><strong>Karan M.</strong><span>Goa, 4 days</span></div>
+        </div>
+      </article>
+      <article class="story-card reveal">
+        <p class="story-quote">"We were six people, six opinions. SafarMate ended the group chat arguments in a day."</p>
+        <div class="story-who">
+          <span class="story-avatar">S</span>
+          <div><strong>Sana P.</strong><span>Kerala, 6 days</span></div>
+        </div>
+      </article>
+      <article class="story-card reveal">
+        <p class="story-quote">"Warned me about a landslide-prone stretch before I even booked the cab. Genuinely saved the trip."</p>
+        <div class="story-who">
+          <span class="story-avatar">R</span>
+          <div><strong>Rohan D.</strong><span>Ladakh, 9 days</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta-band" id="plan">
+    <div class="cta-media">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1800&q=80" alt="Winding mountain road through pine trees">
+      <div class="cta-scrim"></div>
+    </div>
+    <div class="wrap cta-content">
+      <p class="script-tag reveal">Your next Safar starts here</p>
+      <h2 class="reveal">One message. One mate. One itinerary worth keeping.</h2>
+      <div class="reveal">
+        <a href="index.html" class="btn-cta">
+          <span>Start Planning</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:42px;height:42px;filter:brightness(1.1);">
+          <path d="M50 5L90 28.1V74.4L50 97.5L10 74.4V28.1L50 5Z" fill="#1B4332"/>
+          <path d="M50 12L82 30.5V69.5L50 88L18 30.5V30.5L50 12Z" fill="#5DA57D"/>
+          <circle cx="50" cy="35" r="12" fill="#FBF7ED"/>
+          <path d="M30 70C40 60 60 60 70 70" stroke="#FBF7ED" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">SafarMate</span>
+      </a>
+      <p class="script-tag script-tag--footer">Har Safar Ka Ek Hi Mate</p>
+      <p class="footer-note">Built with care by Parv.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#how-it-works">How it works</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#features">Why us</a>
+      <a href="#stories">Stories</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#top">About</a>
+      <a href="#top">Careers</a>
+      <a href="#top">Contact</a>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Trip tips, occasionally</h4>
+      <p>No spam — just routes worth taking.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 SafarMate. All rights reserved.</span>
+    <span>Made by Parv, for every restless traveler.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="safarmate.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafarMate — Your Dynamic Itinerary</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="itinerary.css">
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5L90 28.1V74.4L50 97.5L10 74.4V28.1L50 5Z" fill="#1B4332"/>
+                    <path d="M50 12L82 30.5V69.5L50 88L18 30.5V30.5L50 12Z" fill="#5DA57D"/>
+                    <circle cx="50" cy="35" r="12" fill="#FBF7ED"/>
+                    <path d="M30 70C40 60 60 60 70 70" stroke="#FBF7ED" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-word">SafarMate</span>
+            </a>
+            <nav class="main-nav">
+                <a href="SafarMate.html">Home</a>
+                <a href="index.html">Modify Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="top-bar">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Edit Trip Parameters</a>
+        </div>
+
+        <header class="itinerary-hero">
+            <span class="script-tag">Handcrafted Travel Map</span>
+            <h1 id="hero-title">Mapping Out Spots...</h1>
+            <div class="meta-pills" id="meta-pills"></div>
+            <div class="data-badge" id="data-badge" style="display:none;"><i class="fa-solid fa-satellite-dish"></i> <span id="data-badge-text">Real attractions, stays & eats via Geoapify</span></div>
+            <div class="fallback-note" id="fallback-note" style="display:none;"></div>
+        </header>
+
+        <div id="loader" class="loader-box">
+            <div class="spinner"></div>
+            <p style="color: var(--moss-400);">Pulling real spots, stays and eats for your route...</p>
+        </div>
+
+        <div id="content-grid" style="display: none;">
+
+            <div class="glass-panel">
+                <h2 class="panel-header"><i class="fa-solid fa-plane-departure"></i> How to Travel & Connectivity</h2>
+                <div class="travel-grid" id="travel-container"></div>
+            </div>
+
+            <div class="itinerary-grid">
+                <main>
+                    <div class="glass-panel">
+                        <h2 class="panel-header"><i class="fa-solid fa-compass"></i> Concise Spot-by-Spot Schedule</h2>
+                        <div class="timeline" id="timeline-container"></div>
+                    </div>
+                </main>
+
+                <aside>
+                    <div class="glass-panel">
+                        <h2 class="panel-header"><i class="fa-solid fa-hotel"></i> Handpicked Stays</h2>
+                        <div id="hotels-container"></div>
+                    </div>
+
+                    <div class="glass-panel">
+                        <h2 class="panel-header"><i class="fa-solid fa-utensils"></i> Iconic Local Eats</h2>
+                        <div id="dining-container"></div>
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="itinerary.js"></script>
+</body>
+</html>
